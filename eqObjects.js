@@ -6,6 +6,24 @@ const assertEqual = function(actual, expected) {
   }
 };
 
+const eqArrays = function(firstArray,secondArray) {//checks if 2 arrays are identical in type and value
+  let pass = 0; // keeps track of how many elements are identical at the same index
+  if (firstArray.length === secondArray.length) {//first make sure that the arrays are the same length
+    for (let i = 0; i < firstArray.length; i++) {
+      if (firstArray[i] !== secondArray[i]) {//returns false if the elemnts are not identical
+        return false;
+      } else {
+        pass ++;
+      }
+    }
+    if (pass === firstArray.length) {
+      return true;//once all the lements have been checked as identical, returns true
+    }
+  } else {
+    return false;// returns false right away if the arrays are not the same length
+  }
+};
+
 // Returns true if both objects have identical keys with identical values.
 // Otherwise you get back a big fat false!
 const eqObjects = function (object1, object2){
@@ -14,9 +32,10 @@ const eqObjects = function (object1, object2){
   let object2Keys = Object.keys(object2);
   if (object1Keys.length === object2Keys.length){
     for (let i of object1Keys){
-      console.log (`Object1: ${object1[i]} ; Object2 ${object2[i]}`);
-      if (object1[i] === object2[i]){
+      
+      if (object1[i] === object2[i] || eqArrays(object1[i],object2[i])){
         pass ++;
+        console.log (`Object1: ${object1[i]} ; Object2 ${object2[i]}`);
       }else {
         return false;
       }
