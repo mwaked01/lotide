@@ -50,6 +50,6 @@ assertArraysEqual(without([1, 2, 3], [1,5,34]),[2,3]);
 
 //test cases to make sure the original array is not being modified
 const words = ["hello", "world", "lighthouse"];
-without(words, ["lighthouse"]); 
+without(words, ["lighthouse"]);
 // Make sure the original array was not altered by the without function
 assertArraysEqual(words, ["hello", "world", "lighthouse"]);

@@ -1,4 +1,4 @@
-const eqArrays = function (firstArray, secondArray) {//checks if 2 arrays are identical in type and value
+const eqArrays = function(firstArray, secondArray) {//checks if 2 arrays are identical in type and value
   let pass = 0; // keeps track of how many elements are identical at the same index
   if (firstArray.length === secondArray.length) {//first make sure that the arrays are the same length
     for (let i = 0; i < firstArray.length; i++) {
@@ -16,7 +16,7 @@ const eqArrays = function (firstArray, secondArray) {//checks if 2 arrays are id
   }
 };
 
-const assertArraysEqual = function (actual, expected) {
+const assertArraysEqual = function(actual, expected) {
   if (eqArrays(actual, expected)) {
     console.log(`✅✅✅ Assertion Passed: ${actual} === ${expected}`);
   } else {
@@ -25,7 +25,7 @@ const assertArraysEqual = function (actual, expected) {
 };
 
 
-const map = function (array, callback) { //implemet to take in an array and a callback function
+const map = function(array, callback) { //implemet to take in an array and a callback function
   const results = [];//conatins the result of items passed through the call back function
   for (let item of array) {
     results.push(callback(item));
