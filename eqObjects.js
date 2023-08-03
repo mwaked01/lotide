@@ -1,31 +1,6 @@
-const assertEqual = function(actual, expected) {
-  if (actual === expected) {
-    console.log(`✅✅✅ Assertion Passed: ${actual} === ${expected}`);
-  } else {
-    console.log(`🛑🛑🛑 Assertion Failed: ${actual} !== ${expected}`);
-  }
-};
+const assertEqual = require('./assertArraysEqual');
+const eqArrays = require('./eqArrays');
 
-const eqArrays = function(firstArray,secondArray) {//checks if 2 arrays are identical in type and value
-  let pass = 0; // keeps track of how many elements are identical at the same index
-  if (firstArray.length === secondArray.length) {//first make sure that the arrays are the same length
-    for (let i = 0; i < firstArray.length; i++) {
-      if (firstArray[i] !== secondArray[i]) {//returns false if the elemnts are not identical
-        return false;
-      } else {
-        pass ++;
-      }
-    }
-    if (pass === firstArray.length) {
-      return true;//once all the lements have been checked as identical, returns true
-    }
-  } else {
-    return false;// returns false right away if the arrays are not the same length
-  }
-};
-
-// Returns true if both objects have identical keys with identical values.
-// Otherwise you get back a big fat false!
 const eqObjects = function(object1, object2) {
   let pass = 0;// keep track of how many key values match
   let object1Keys = Object.keys(object1); //an array of the object's properties
@@ -46,6 +21,8 @@ const eqObjects = function(object1, object2) {
   }
   return false;// return false when the objects have a different number of keys
 };
+
+module.exports = eqObjects;
 
 const shirtObject = { color: "red", size: "medium" };
 const anotherShirtObject = { size: "medium", color: "red" };

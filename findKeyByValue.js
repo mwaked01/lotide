@@ -16,6 +16,8 @@ const findKeyByValue = function(obj, keyVal) {
   //no need to return undefined as the function will do so if nothing is returned.
 };
 
+module.exports = findKeyByValue;
+
 const bestTVShowsByGenre = { // place keys in '' to keep eslint happy
   'sci_fi': "The Expanse",
   'comedy': "Brooklyn Nine-Nine",

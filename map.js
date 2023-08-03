@@ -33,6 +33,8 @@ const map = function(array, callback) { //implemet to take in an array and a cal
   return results;//return an array with items that went through the call back function
 };
 
+module.exports = map;
+
 //test
 const words = ["ground", "control", "to", "major", "tom"];
 const numArrays = [[1, 2, 3], [4], 'five'];

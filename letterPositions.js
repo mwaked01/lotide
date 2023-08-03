@@ -38,6 +38,8 @@ const letterPositions = function(sentance) {
   return results;
 };
 
+module.exports = letterPositions;
+
 //test
 
 const greetingCount = (letterPositions("hello"));
