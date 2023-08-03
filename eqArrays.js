@@ -1,11 +1,3 @@
-const assertEqual = function(actual, expected) {
-  if (actual === expected) {
-    console.log(`✅✅✅ Assertion Passed: ${actual} === ${expected}`);
-  } else {
-    console.log(`🛑🛑🛑 Assertion Failed: ${actual} !== ${expected}`);
-  }
-};
-
 const eqArrays = function(firstArray,secondArray) {//checks if 2 arrays are identical in type and value
   let pass = 0; // keeps track of how many elements are identical at the same index
   if (firstArray.length === secondArray.length) {//first make sure that the arrays are the same length
@@ -24,8 +16,5 @@ const eqArrays = function(firstArray,secondArray) {//checks if 2 arrays are iden
   }
 };
 
+module.exports = eqArrays;
 
-//test
-assertEqual(eqArrays([1, 2, 3], [3,2,1,]), true);
-assertEqual(eqArrays([true, "2", "3"], ["1", "2", "3"]), true);
-assertEqual(eqArrays([1, 2, 3], [1, 2, '3']), true);
