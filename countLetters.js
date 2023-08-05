@@ -23,9 +23,3 @@ const countLetters = function(sentance) {
 
 module.exports = countLetters;
 
-const sentanceString = "this is a sentance";
-const sentanceString1 = "lighthouse in the house";
-
-console.log(countLetters(sentanceString1));
-assertEqual(countLetters(sentanceString)["s"],3);
-assertEqual(countLetters(sentanceString)["m"],undefined);
