@@ -12,11 +12,11 @@ This project was created and published by me as part of my learnings at Lighthou
 
 **Install it:**
 
-`npm install @mwaked01/lotide`
+`npm install @waked01/lotide`
 
 **Require it:**
 
-`const _ = require('@mwaked01/lotide');`
+`const _ = require('@waked01/lotide');`
 
 **Call it:**
 `const results = _AssertArraysEqual([1, 2, 3],[1,2,3]) // => ✅✅✅ Assertion Passed: [1, 2, 3] === [1, 2, 3]`
